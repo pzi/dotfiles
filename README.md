@@ -1,0 +1,1 @@
+`for f in $(ls -Ap ~/Dropbox/Apps/dotfiles/ | grep -v "/"); do echo "Symlinking $f to "; done`
