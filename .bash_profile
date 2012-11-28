@@ -127,4 +127,5 @@ alias gitlf='git log --pretty=full -5 --color --name-status | cat'
 alias gits='git status'
 alias tree='find . -print | sed -e '\''s;[^/]*/;| - ;g;s; - |; |;g'\'''
 
-export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:~/Documents/android-sdks/tools:~/Documents/android-sdks/platform-tools
+# Android SDK
+export PATH=$PATH:~/Documents/android-sdks/tools:~/Documents/android-sdks/platform-tools
