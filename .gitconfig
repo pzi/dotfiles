@@ -2,8 +2,8 @@
   excludesfile = ~/.gitignore
   editor = subl -w
 [user]
-  name = Levi Buzolic
-  email = levibuzolic@gmail.com
+  name = Patrik Affentranger
+  email = patrik.affentranger@gmail.com
 [push]
   default = current
 [color]
