@@ -1,2 +1,11 @@
 .DS_Store
 **/.DS_Store
+desktop.ini
+Thumbs.db
+
+# CodeKit
+codekit-config.json
+
+# COMPASS
+.sass-cache
+config.rb
