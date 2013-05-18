@@ -10,7 +10,6 @@ alias go="git checkout"
 alias gpull="git pull"
 alias gpush="git push"
 alias be="bundle exec"
-alias rr="touch tmp/restart.txt"
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
