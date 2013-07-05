@@ -1,6 +1,14 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 ( which hub > /dev/null ) && $(hub alias -s bash)
 
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+# niceties
+alias hosts="sudo nano /etc/hosts"
+
 alias gs="git status"
 alias gd="git diff"
 alias ga="git add"
@@ -129,3 +137,13 @@ alias tree='find . -print | sed -e '\''s;[^/]*/;| - ;g;s; - |; |;g'\'''
 
 # Android SDK
 export PATH=$PATH:~/Documents/android-sdks/tools:~/Documents/android-sdks/platform-tools
+
+# Added for local development (node, npm, etc)
+export PATH=$HOME/local/bin:$PATH
+
+## Added support for local rubies
+export PATH=$HOME/local/ruby/bin:$PATH
+
+export ANDROID_HOME=/usr/local/Cellar/android-sdk/r21.0.1
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
