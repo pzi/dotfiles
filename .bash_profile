@@ -8,6 +8,8 @@ alias ....="cd ../../.."
 
 # niceties
 alias hosts="sudo nano /etc/hosts"
+alias vhosts="sudo nano /etc/apache2/extra/httpd-vhosts.conf"
+alias simulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
 alias gs="git status"
 alias gd="git diff"
@@ -132,7 +134,6 @@ alias gitcp='git cherry-pick'
 alias gitl='git log --pretty=oneline -3 --color --name-status | cat'
 alias gitl25='git log --pretty=oneline -25 --color | cat'
 alias gitlf='git log --pretty=full -5 --color --name-status | cat'
-alias gits='git status'
 alias tree='find . -print | sed -e '\''s;[^/]*/;| - ;g;s; - |; |;g'\'''
 
 # Android SDK
