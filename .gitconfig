@@ -11,6 +11,7 @@
   diff = auto
   interactive = auto
   status = auto
+	ui = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
