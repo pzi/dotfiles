@@ -10,6 +10,7 @@ alias ....="cd ../../.."
 alias hosts="sudo nano /etc/hosts"
 alias vhosts="sudo nano /etc/apache2/extra/httpd-vhosts.conf"
 alias simulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+alias mou="open -a Mou"
 
 alias gs="git status"
 alias gd="git diff"
