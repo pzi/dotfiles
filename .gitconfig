@@ -1,9 +1,10 @@
 [core]
   excludesfile = ~/.gitignore
   editor = subl -w
+	quotepath = false
 [user]
-  name = Patrik Affentranger
-  email = patrik.affentranger@gmail.com
+	name = Patrik Affentranger
+	email = patrik.affentranger@gmail.com
 [push]
   default = current
 [color]

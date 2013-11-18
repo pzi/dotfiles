@@ -1,6 +1,10 @@
+# Folder view configuration files
 .DS_Store
 **/.DS_Store
 desktop.ini
+
+# Thumbnail cache files
+._*
 Thumbs.db
 
 # CodeKit
@@ -8,4 +12,7 @@ codekit-config.json
 
 # COMPASS
 .sass-cache
-config.rb
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
