@@ -12,3 +12,9 @@ Also change username in `.rvmrc` to resemble current user.
 Finally, get Sublime Text 2 to launch from the CLI by running:
 ```bash
 ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+```
+
+In case you use Sublime Text 3, do the below:
+```bash
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+```
