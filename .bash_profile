@@ -16,6 +16,10 @@ shopt -s histappend
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
+# Prepend timestamps to bash history
+export HISTTIMEFORMAT='%Y-%b-%d %a %H:%M:%S - '
+export PS1='\t \u@\h:\w\$ '
+
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`
