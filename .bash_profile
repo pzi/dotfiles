@@ -30,9 +30,8 @@ done
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder iTunes Spotify SystemUIServer iTerm Tweetbot" killall
 
-
-
-
+# use sublime to open gems
+export BUNDLER_EDITOR=subl
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
@@ -52,7 +51,7 @@ export ANDROID_HOME=/usr/local/Cellar/android-sdk/r21.0.1
 export PATH=$HOME/local/bin:$PATH
 
 ## Added support for local rubies
-export PATH=$HOME/local/ruby/bin:$PATH
+# export PATH=$HOME/local/ruby/bin:$PATH
 
 # This loads NVM
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
