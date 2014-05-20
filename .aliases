@@ -17,8 +17,11 @@ alias oo="open ."
 # niceties
 alias hosts="sudo nano /etc/hosts"
 alias vhosts="sudo nano /etc/apache2/extra/httpd-vhosts.conf"
-alias simulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+alias sim="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 alias mou="open -a Mou"
+alias be="bundle exec"
+alias shitsfucked="be rake db:drop db:create db:migrate && be rake db:seed db:test:prepare && bundle install"
+alias stompit="shitsfucked"
 
 # Git shortcuts
 alias g="git"
@@ -44,7 +47,6 @@ alias rd="r dbconsole"
 alias rr='touch tmp/restart.txt'
 alias rl='tail -f log/*.log'
 alias rrl='rr && rl'
-alias be="bundle exec"
 alias wl=rl
 
 # Unix, Git, Memcached
