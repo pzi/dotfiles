@@ -19,7 +19,7 @@
     "tmp/cache"
   ],
   "bold_folder_labels": true,
-  "color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+  "color_scheme": "Packages/User/Tomorrow-Night (SL).tmTheme",
   "ensure_newline_at_eof_on_save": true,
   "file_exclude_patterns":
   [
@@ -55,26 +55,28 @@
     ".sass-cache",
     "bower_components",
     "node_modules",
+    ".tmp",
     "coverage"
   ],
-  "font_face": "Ubuntu Mono",
+  "font_face": "UbuntuMono-Regular",
   "font_options":
   [
     "subpixel_antialias"
   ],
-  "font_size": 14.0,
-  "highlight_line": false,
+  "font_size": 15.0,
+  "highlight_line": true,
   "highlight_modified_tabs": true,
   "ignored_packages":
   [
-    "Vintage"
+    "Vintage",
+    "Markdown"
   ],
   "rulers":
   [
     100
   ],
   "tab_size": 2,
-  "theme": "Soda Dark.sublime-theme",
+  "theme": "Soda Dark 3.sublime-theme",
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true
 }
