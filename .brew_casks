@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# Install native apps
+# Usage: `brew $(cat .brew_casks)`
+
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+
+# browsers
+brew cask install firefox
+brew cask install google-chrome
+brew cask install google-chrome-dev
+
+# development
+brew cask install dash
+brew cask install imagealpha
+brew cask install imageoptim
+brew cask install iterm2
+brew cask install sourcetree
+brew cask install sublime-text3
+brew cask install transmit
+brew cask install virtualbox
+
+# other
+brew cask install adium
+brew cask install alfred
+brew cask install caffeine
+brew cask install divvy
+brew cask install dropbox
+brew cask install fantastical
+brew cask install licecap
+brew cask install limechat
+brew cask install miro-video-converter
+brew cask install mou
+brew cask install skype
+brew cask install spotify
+brew cask install the-unarchiver
+brew cask install things
+brew cask install transmission
+brew cask install vlc
