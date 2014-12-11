@@ -39,13 +39,13 @@ export PATH="$HOME/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 ( which hub > /dev/null ) && $(hub alias -s bash)
 
+# Requires bash-completion (brew install bash-completion)
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
 # Android SDK
-export PATH=$PATH:~/Documents/android-sdks/tools:~/Documents/android-sdks/platform-tools
-export ANDROID_HOME=/usr/local/Cellar/android-sdk/r21.0.1
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Added for local development (node, npm, etc)
 export PATH=$HOME/local/bin:$PATH
