@@ -38,3 +38,4 @@ brew cask install the-unarchiver
 brew cask install things
 brew cask install transmission
 brew cask install vlc
+brew cask install sequel-pro
