@@ -7,11 +7,9 @@ desktop.ini
 ._*
 Thumbs.db
 
-# CodeKit
-codekit-config.json
-
 # COMPASS
 .sass-cache
+.bundle
 
 # Files that might appear on external disks
 .Spotlight-V100
