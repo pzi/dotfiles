@@ -26,6 +26,7 @@ brew cask install google-chrome-dev
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install iterm2
+brew cask install launchrocket
 brew cask install sourcetree
 brew cask install sublime-text3
 brew cask install transmit
