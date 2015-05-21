@@ -1,7 +1,7 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,aliases,bash_prompt,functions}; do
+for file in ~/.{aliases,bash_prompt,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -46,9 +46,6 @@ fi
 
 # Android SDK
 export ANDROID_HOME=/usr/local/opt/android-sdk
-
-# Added for local development (node, npm, etc)
-export PATH=$HOME/local/bin:$PATH
 
 ## Added support for local rubies
 # export PATH=$HOME/local/ruby/bin:$PATH
