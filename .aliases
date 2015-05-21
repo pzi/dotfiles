@@ -38,7 +38,7 @@ alias gitl25='git log --pretty=oneline -25 --color | cat'
 alias gitlf='git log --pretty=full -5 --color --name-status | cat'
 
 # Rails shortcuts
-alias rs="rails s"
+alias rs="rails s -b 0.0.0.0"
 alias rc="rails c"
 alias rg='rails g'
 alias rd="rails db"
