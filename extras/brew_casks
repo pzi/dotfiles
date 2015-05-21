@@ -36,21 +36,26 @@ brew cask install virtualbox
 brew cask install 1password
 brew cask install alfred
 brew cask install caffeine
+brew cask install cakebrew
 brew cask install divvy
 brew cask install dropbox
 brew cask install fantastical
+brew cask install fluid
+brew cask install gpgtools
 brew cask install licecap
 brew cask install limechat
 brew cask install miro-video-converter
 brew cask install mou
 brew cask install on-the-job
+brew cask install sequel-pro
+brew cask install sitesucker
 brew cask install skype
+brew cask install spectacle
 brew cask install spotify
 brew cask install the-unarchiver
 brew cask install things
 brew cask install transmission
 brew cask install vlc
-brew cask install sequel-pro
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
