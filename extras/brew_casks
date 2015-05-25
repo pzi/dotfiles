@@ -45,6 +45,7 @@ brew cask install gpgtools
 brew cask install licecap
 brew cask install limechat
 brew cask install miro-video-converter
+brew cask install namechanger
 brew cask install mou
 brew cask install on-the-job
 brew cask install sequel-pro
