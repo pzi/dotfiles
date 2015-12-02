@@ -18,11 +18,12 @@ alias gx="gitx ."
 # niceties
 alias hosts="sudo nano /etc/hosts"
 alias vhosts="sudo nano /etc/apache2/extra/httpd-vhosts.conf"
-alias sim="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
+alias sim="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias mou="open -a Mou"
 alias be="bundle exec"
 alias shitsfucked="bundle install && be rake db:drop db:create db:migrate && be rake db:seed db:test:prepare"
 alias stompit="shitsfucked"
+alias svgo-sketch='svgo --enable=removeTitle --enable=removeDesc --enable=removeDoctype --enable=removeEmptyAttrs --enable=removeUnknownsAndDefaults --enable=removeUnusedNS --enable=removeEditorsNSData'
 
 # Git shortcuts
 alias g="git"
