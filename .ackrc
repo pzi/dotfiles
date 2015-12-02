@@ -1,0 +1,17 @@
+# Extend Type search
+--type-set=react:ext:jsx,cjsx
+--type-add=html:ext:haml,jade
+--type-add=js:ext:coffee,js.erb,coffe.erb
+--type-add=md:ext:md,mkd
+
+# Always sort the files
+--sort-files
+
+# Always color, even if piping to a another program
+--color
+
+# Don't check these folders
+--ignore-dir=node_modules
+--ignore-dir=bower_components
+--ignore-dir=tmp
+--ignore-dir=log
