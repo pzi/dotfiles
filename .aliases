@@ -26,7 +26,8 @@ alias stompit="shitsfucked"
 alias svgo-sketch='svgo --enable=removeTitle --enable=removeDesc --enable=removeDoctype --enable=removeEmptyAttrs --enable=removeUnknownsAndDefaults --enable=removeUnusedNS --enable=removeEditorsNSData'
 
 # Git shortcuts
-alias g="git"
+alias gf="git fetch"
+alias gp="git remote prune origin"
 alias gs="git status"
 alias gd="git diff"
 alias ga="git add"
