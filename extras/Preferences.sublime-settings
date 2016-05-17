@@ -1,4 +1,9 @@
 {
+  "added_words":
+  [
+    "app",
+    "Severability"
+  ],
   "auto_complete": true,
   "auto_indent": true,
   "binary_file_patterns":
@@ -45,7 +50,8 @@
     "*.class",
     "*.psd",
     "*.db",
-    ".sassc"
+    ".sassc",
+    "*.log"
   ],
   "folder_exclude_patterns":
   [
@@ -67,7 +73,7 @@
     "subpixel_antialias",
     "no_round"
   ],
-  "font_size": 17.0,
+  "font_size": 18.0,
   "highlight_line": true,
   "highlight_modified_tabs": true,
   "ignored_packages":
