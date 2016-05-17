@@ -20,3 +20,7 @@
   rb = rebase --committer-date-is-author-date
 [merge]
   tool = opendiff
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

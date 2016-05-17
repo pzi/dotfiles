@@ -38,6 +38,7 @@ alias gitcp='git cherry-pick'
 alias gitl='git log --pretty=oneline -3 --color --name-status | cat'
 alias gitl25='git log --pretty=oneline -25 --color | cat'
 alias gitlf='git log --pretty=full -5 --color --name-status | cat'
+alias syncwithdev='git rebase origin/develop'
 
 # Rails shortcuts
 alias rs="rails s -b 0.0.0.0"
@@ -74,6 +75,9 @@ alias dir=la
 
 # List only directories
 alias lsd='ls -lF ${colorflag} | grep "^d"'
+
+# List all files and their permissions
+alias permissions='for f in $(ls -a); do stat -f "%A %N" $f; done;'
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
