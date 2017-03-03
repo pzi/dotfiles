@@ -1,0 +1,40 @@
+// Visual Studio Code Settings
+{
+    "http.proxyStrictSSL": false,
+    "TodoParser": {
+        "exclude": ["cpp", "c"],
+        "include": ["js", "cshtml", "tsx"],
+        "folderExclude": ["node_modules", ".vscode"],
+        "markers": ["NOTE:", "REMINDER:", "TODO:"],
+        "autoDefaultMarkers": true
+    },
+    "editor.cursorStyle": "line",
+    "editor.detectIndentation": true,
+    "editor.fontFamily": "'Ubuntu Mono', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 15,
+    "editor.fontWeight": "normal",
+    "editor.insertSpaces": true,
+    "editor.mouseWheelScrollSensitivity": 2,
+    "editor.renderControlCharacters": true,
+    "editor.renderIndentGuides": true,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [100],
+    "editor.scrollBeyondLastLine": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "off",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "_static/": true,
+        "*.exe": true,
+        "*.dll": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "scss.lint.zeroUnits": "warning",
+    "window.openFoldersInNewWindow": "on",
+    "workbench.colorTheme": "Tomorrow Night",
+    "workbench.sideBar.location": "right"
+}
