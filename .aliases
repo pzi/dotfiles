@@ -38,7 +38,8 @@ alias gitcp='git cherry-pick'
 alias gitl='git log --pretty=oneline -3 --color --name-status | cat'
 alias gitl25='git log --pretty=oneline -25 --color | cat'
 alias gitlf='git log --pretty=full -5 --color --name-status | cat'
-alias syncwithdev='git rebase origin/develop'
+alias syncwithdev='git rebase origin/develop --committer-date-is-author-date'
+alias syncwithmaster='git rebase origin/master --committer-date-is-author-date'
 
 # Rails shortcuts
 alias rs="rails s -b 0.0.0.0"
