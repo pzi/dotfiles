@@ -1,11 +1,15 @@
+[user]
+  name = Patrik Affentranger
+  useConfigOnly = true
 [core]
+  autocrlf = true
+  attributesfile = ~/.gitattributes
   excludesfile = ~/.gitignore
   editor = subl -w
   quotepath = false
-[user]
-  name = Patrik Affentranger
-  email = patrik.affentranger@gmail.com
 [push]
+  default = current
+[pull]
   default = current
 [color]
   branch = auto
@@ -21,6 +25,6 @@
 [merge]
   tool = opendiff
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
