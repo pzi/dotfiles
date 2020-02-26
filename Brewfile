@@ -33,6 +33,7 @@ brew 'wget'
 brew 'yarn'
 brew 'youtube-dl'
 brew 'zsh'
+brew 'zplug'
 brew 'zsh-completions'
 
 # ---------- Casks ----------
