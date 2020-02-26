@@ -10,47 +10,16 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Sites"
 alias h="history"
-alias s="subl ."
 alias o="open"
 alias oo="open ."
-alias gx="gitx ."
+
 
 # niceties
 alias hosts="sudo nano /etc/hosts"
 alias vhosts="sudo nano /etc/apache2/extra/httpd-vhosts.conf"
 alias sim="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias mou="open -a Mou"
-alias be="bundle exec"
-alias shitsfucked="bundle install && be rake db:drop db:create db:migrate && be rake db:seed db:test:prepare"
-alias stompit="shitsfucked"
 alias svgo-sketch='svgo --enable=removeTitle --enable=removeDesc --enable=removeDoctype --enable=removeEmptyAttrs --enable=removeUnknownsAndDefaults --enable=removeUnusedNS --enable=removeEditorsNSData'
-
-# Git shortcuts
-alias gf="git fetch"
-alias gp="git remote prune origin"
-alias gs="git status"
-alias gd="git diff"
-alias ga="git add"
-alias gc="git commit"
-alias gcm="git commit -m"
-alias go="git checkout"
-alias gitcp='git cherry-pick'
-alias gitl='git log --pretty=oneline -3 --color --name-status | cat'
-alias gitl25='git log --pretty=oneline -25 --color | cat'
-alias gitlf='git log --pretty=full -5 --color --name-status | cat'
-alias gbranches="gf && gp && git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n | grep -v -E 'tags|release'"
-alias syncwithdev='git rebase origin/develop --committer-date-is-author-date'
-alias syncwithmaster='git rebase origin/master --committer-date-is-author-date'
-
-# Rails shortcuts
-alias rs="rails s -b 0.0.0.0"
-alias rc="rails c"
-alias rg='rails g'
-alias rd="rails db"
-alias rr='touch tmp/restart.txt'
-alias rl='tail -f log/*.log'
-alias rrl='rr && rl'
-alias wl=rl
 
 # Unix, Git, Memcached
 alias cls='clear'
@@ -128,7 +97,3 @@ alias spoton="sudo mdutil -a -i on"
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 2'"
-
-# Kill all the tabs in Chrome to free up memory
-# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
-alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"

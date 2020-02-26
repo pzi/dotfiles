@@ -1,13 +1,14 @@
 # Folder view configuration files
 .DS_Store
-**/.DS_Store
+.DS_Store?
 desktop.ini
 
 # Thumbnail cache files
 ._*
 Thumbs.db
+ehthumbs.db
 
-# COMPASS
+# Sass
 .sass-cache
 .bundle
 
@@ -15,4 +16,12 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-.byebug_history
+# Temp files
+*.swp
+*.swo
+*.orig
+*~
+
+# Common log files
+npm-debug.log
+yarn-error.log

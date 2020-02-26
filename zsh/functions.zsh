@@ -1,5 +1,5 @@
 # Simple calculator
-function calc() {
+calc() {
   local result=""
   result="$(printf "scale=10;$*\n" | bc --mathlib | tr -d '\\\n')"
   #                       └─ default (when `--mathlib` is used) is 20
@@ -17,12 +17,12 @@ function calc() {
 }
 
 # Create a new directory and enter it
-function mkd() {
+mkd() {
   mkdir -p "$@" && cd "$@"
 }
 
 # Determine size of a file or total size of a directory
-function fs() {
+fs() {
   if du -b /dev/null > /dev/null 2>&1; then
     local arg=-sbh
   else
@@ -38,13 +38,13 @@ function fs() {
 # Use Git’s colored diff when available
 hash git &>/dev/null
 if [ $? -eq 0 ]; then
-  function diff() {
+  diff() {
     git diff --no-index --color-words "$@"
   }
 fi
 
 # Create a data URL from a file
-function dataurl() {
+dataurl() {
   local mimeType=$(file -b --mime-type "$1")
   if [[ $mimeType == text/* ]]; then
     mimeType="${mimeType};charset=utf-8"
@@ -53,7 +53,7 @@ function dataurl() {
 }
 
 # Start an HTTP server from a directory, optionally specifying the port
-function server() {
+server() {
   local port="${1:-8000}"
   sleep 1 && open "http://localhost:${port}/" &
   # Set the default Content-Type to `text/plain` instead of `application/octet-stream`
@@ -62,7 +62,7 @@ function server() {
 }
 
 # Compare original and gzipped file size
-function gz() {
+gz() {
   local origsize=$(wc -c < "$1")
   local gzipsize=$(gzip -c "$1" | wc -c)
   local ratio=$(echo "$gzipsize * 100/ $origsize" | bc -l)
@@ -72,83 +72,43 @@ function gz() {
 
 # Test if HTTP compression (RFC 2616 + SDCH) is enabled for a given URL.
 # Send a fake UA string for sites that sniff it instead of using the Accept-Encoding header. (Looking at you, ajax.googleapis.com!)
-function httpcompression() {
+httpcompression() {
   encoding="$(curl -LIs -H 'User-Agent: Mozilla/5 Gecko' -H 'Accept-Encoding: gzip,deflate,compress,sdch' "$1" | grep '^Content-Encoding:')" && echo "$1 is encoded using ${encoding#* }" || echo "$1 is not using any encoding"
 }
 
 # All the dig info
-function digga() {
+digga() {
   dig +nocmd "$1" any +multiline +noall +answer
 }
 
 # Escape UTF-8 characters into their 3-byte format
-function escape() {
+escape() {
   printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u)
   echo # newline
 }
 
 # Decode \x{ABCD}-style Unicode escape sequences
-function unidecode() {
+unidecode() {
   perl -e "binmode(STDOUT, ':utf8'); print \"$@\""
   echo # newline
 }
 
 # Get a character’s Unicode code point
-function codepoint() {
+codepoint() {
   perl -e "use utf8; print sprintf('U+%04X', ord(\"$@\"))"
   echo # newline
 }
 
-# Add note to Notes.app (OS X 10.8)
-# Usage: `note 'foo'` or `echo 'foo' | note`
-function note() {
-  local text
-  if [ -t 0 ]; then # argument
-    text="$1"
-  else # pipe
-    text=$(cat)
-  fi
-  body=$(echo "$text" | sed -E 's|$|<br>|g')
-  osascript >/dev/null <<EOF
-tell application "Notes"
-  tell account "iCloud"
-    tell folder "Notes"
-      make new note with properties {name:"$text", body:"$body"}
-    end tell
-  end tell
-end tell
-EOF
-}
-
-# Add reminder to Reminders.app (OS X 10.8)
-# Usage: `remind 'foo'` or `echo 'foo' | remind`
-function remind() {
-  local text
-  if [ -t 0 ]; then
-    text="$1" # argument
-  else
-    text=$(cat) # pipe
-  fi
-  osascript >/dev/null <<EOF
-tell application "Reminders"
-  tell the default list
-    make new reminder with properties {name:"$text"}
-  end tell
-end tell
-EOF
-}
-
-# Manually remove a downloaded app or file from the quarantine
-function unquarantine() {
-  for attribute in com.apple.metadata:kMDItemDownloadedDate com.apple.metadata:kMDItemWhereFroms com.apple.quarantine; do
-    xattr -r -d "$attribute" "$@"
-  done
-}
-
 # cd into the directory of a repo after git clone
-function clone {
+clone() {
   url=$1;
   reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
   git clone $url $reponame;
   cd $reponame;
+}
+
+git_stats() {
+  git log --shortstat --author "Patrik Affentranger" --since "52 weeks ago" | \
+    grep "files changed" | \
+    awk '{files+=$1; inserted+=$4; deleted+=$6} END {print "files changed", files, "lines inserted:", inserted, "lines deleted:", deleted}'
 }
