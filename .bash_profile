@@ -28,24 +28,15 @@ for option in autocd globstar; do
 done
 
 # Add `killall` tab completion for common apps
-complete -o "nospace" -W "Contacts Calendar Dock Finder iTunes Spotify SystemUIServer iTerm Tweetbot" killall
-
-# use sublime to open gems
-export BUNDLER_EDITOR=subl
+complete -o "nospace" -W "Contacts Calendar Dock Finder iTunes Spotify SystemUIServer iTerm" killall
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-( which hub > /dev/null ) && $(hub alias -s bash)
 
 # Requires bash-completion (brew install bash-completion)
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
-
-# Android SDK
-export ANDROID_HOME=/usr/local/opt/android-sdk
 
 ## Added support for local rubies
 # export PATH=$HOME/local/ruby/bin:$PATH
